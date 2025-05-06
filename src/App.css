@@ -1,0 +1,33 @@
+/* src/App.css */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top: 5px solid #fff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
