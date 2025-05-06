@@ -1,0 +1,167 @@
+/* src/styles/EventList.css */
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+.event-list-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+}
+
+.event-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.event-list-header h1 {
+  font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+  font-size: 32px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.back-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.event-list-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.loading-message, .error-message, .no-events {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.event-list-card {
+  border-radius: 12px;
+  padding: 20px;
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-list-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.event-list-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.event-date, .event-venue {
+  margin: 5px 0;
+}
+
+.view-event-btn {
+  margin-top: auto;
+  display: inline-block;
+  padding: 10px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-top: 15px;
+}
+
+.view-event-btn:hover {
+  background-color: #333;
+}
+
+/* Event card colors - matching profile page */
+.event-card-blue {
+  background-color: #ADD0ED;
+}
+
+.event-card-red {
+  background-color: #ECC0C0;
+}
+
+.event-card-yellow {
+  background-color: #F5F5DC;
+}
+
+.event-card-green {
+  background-color: #A4EBC6;
+}
+
+.event-card-purple {
+  background-color: #DDA0DD;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .event-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
